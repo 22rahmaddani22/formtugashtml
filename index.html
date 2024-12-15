@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Registrasi</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        h2 {
+            text-align: left;
+        }
+        fieldset {
+            border: 1px solid #000;
+            margin-bottom: 20px;
+            padding: 10px;
+        }
+        legend {
+            font-weight: bold;
+        }
+        .form-group {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+        .form-group label {
+            width: 200px;
+            margin-right: 10px;
+            font-weight: bold;
+        }
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 300px;
+            padding: 5px;
+            box-sizing: border-box;
+        }
+        input[type="file"] {
+            flex: none;
+        }
+        textarea {
+            resize: none;
+        }
+        .radio-group, .checkbox-group {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+        .radio-group label, .checkbox-group label {
+            font-weight: normal;
+            margin-right: 10px;
+        }
+        .button-group {
+            text-align: center;
+        }
+        button {
+            padding: 10px 20px;
+            margin: 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h2>Form Registrasi</h2>
+    <form action="#" method="post" enctype="multipart/form-data">
+        <fieldset>
+            <legend>Biodata</legend>
+            <div class="form-group">
+                <label for="nama">Nama Mahasiswa</label>
+                <input type="text" id="nama" name="nama" placeholder="Nama Anda">
+            </div>
+
+            <div class="form-group">
+                <label for="nim">No Induk Mahasiswa (NIM)</label>
+                <input type="number" id="nim" name="nim" placeholder="12345678">
+            </div>
+
+            <div class="form-group">
+                <label for="alamat">Alamat Mahasiswa</label>
+                <textarea id="alamat" name="alamat" rows="3" placeholder="Alamat Anda"></textarea>
+            </div>
+
+            <div class="form-group">
+                <label for="tanggal">Tanggal Lahir</label>
+                <select id="tanggal" name="tanggal">
+                    <option>01</option>
+                    <option>02</option>
+                    <option>03</option>
+                </select>
+                <select id="bulan" name="bulan">
+                    <option>Januari</option>
+                    <option>Februari</option>
+                    <option>Maret</option>
+                </select>
+                <select id="tahun" name="tahun">
+                    <option>1990</option>
+                    <option>1991</option>
+                    <option>1992</option>
+                </select>
+            </div>
+
+            <div class="radio-group">
+                <label>Jenis Kelamin:</label>
+                <input type="radio" id="pria" name="jenis_kelamin" value="Pria">
+                <label for="pria">Pria</label>
+                <input type="radio" id="wanita" name="jenis_kelamin" value="Wanita">
+                <label for="wanita">Wanita</label>
+            </div>
+
+            <div class="form-group">
+                <label for="foto">Upload Foto</label>
+                <input type="file" id="foto" name="foto">
+            </div>
+
+            <div class="form-group">
+                <label for="website">URL Website</label>
+                <input type="url" id="website" name="website" placeholder="URL Website Anda">
+            </div>
+        </fieldset>
+
+        <fieldset>
+            <legend>Info Akun</legend>
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" placeholder="Email Anda">
+            </div>
+
+            <div class="form-group">
+                <label for="username">Username</label>
+                <input type="text" id="username" name="username" placeholder="Username Anda">
+            </div>
+
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" placeholder="Password Anda">
+            </div>
+
+            <div class="form-group">
+                <label for="ulang_password">Ulangi Password</label>
+                <input type="password" id="ulang_password" name="ulang_password" placeholder="Ulangi Password Anda">
+            </div>
+        </fieldset>
+
+        <fieldset>
+            <legend>Kemampuan Dasar</legend>
+            <div class="checkbox-group">
+                <input type="checkbox" id="html" name="kemampuan" value="HTML">
+                <label for="html">HTML</label>
+                <input type="checkbox" id="css" name="kemampuan" value="CSS">
+                <label for="css">CSS</label>
+                <input type="checkbox" id="javascript" name="kemampuan" value="JavaScript">
+                <label for="javascript">JavaScript</label>
+                <input type="checkbox" id="php" name="kemampuan" value="PHP">
+                <label for="php">PHP</label>
+                <input type="checkbox" id="mysql" name="kemampuan" value="MySQL">
+                <label for="mysql">MySQL</label>
+                <input type="checkbox" id="laravel" name="kemampuan" value="Laravel">
+                <label for="laravel">Laravel</label>
+                <input type="checkbox" id="react_native" name="kemampuan" value="React Native">
+                <label for="react_native">React Native</label>
+            </div>
+        </fieldset>
+
+        <div class="button-group">
+            <button type="reset">Reset</button>
+            <button type="submit">Simpan</button>
+            <button type="button">Button</button>
+        </div>
+    </form>
+</body>
+</html>
